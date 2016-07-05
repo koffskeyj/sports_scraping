@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from app.views import get_player_view
+from app.views import get_stats_view
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', get_player_view, name="get_player_view")
+    url(r'^$', get_stats_view, name="get_stats_view")
 ]
