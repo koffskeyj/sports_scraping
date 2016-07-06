@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 def get_stats_view(request):
-    player = request.GET.get("player") or "Sammy Watkins"
+    player = request.GET.get("player") or "Jason Witten"
     url = "http://nfl.com/search?query={}".format(player)
     content = requests.get(url).text
     souper = BeautifulSoup(content, "html.parser")
